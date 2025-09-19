@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Optimove demo</title>
 </head>
+
+<script type="text/javascript" src="https://sdk.optimove.net/v2/websdk/?tenant_id=1676&tenant_token=c6090f8b1b704887bd6a27311d37c1e8" id="optimoveSDK"
+        data-optimove-service-worker-path="optimove.worker.js">
+</script>
+
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -16,10 +21,6 @@
                 });
         });
     }
-</script>
-
-<script type="text/javascript" src="https://sdk.optimove.net/v2/websdk/?tenant_id=1676&tenant_token=c6090f8b1b704887bd6a27311d37c1e8" id="optimoveSDK"
-        data-optimove-service-worker-path="optimove.worker.js">
 </script>
 
 <script>
