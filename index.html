@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimove demo</title>
+</head>
+<script type="text/javascript" src="https://sdk.optimove.net/v2/websdk/?tenant_id=1676&tenant_token=c6090f8b1b704887bd6a27311d37c1e8" id="optimoveSDK"
+        data-optimove-service-worker-path="/js/optimove/optimove.worker.js">
+</script>
+<script>
+    window["optimoveSDK"].API.setUserId("25409360");
+    window["optimoveSDK"].API.setPushReceivedListener((push) => {
+        logger.info("optimoveSDK pushReceivedListener. Push received: ", push);
+    });
+    window["optimoveSDK"].API.setPushOpenedListener((push) => {
+        logger.info("optimoveSDK pushOpenedListener. Push opened: ", push);
+    });
+</script>
+<body>
+<h3>Optimove demo</h3>
+</body>
+</html>
