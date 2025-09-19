@@ -8,6 +8,20 @@
         data-optimove-service-worker-path="/js/optimove/optimove.worker.js">
 </script>
 <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/optimove/optimove.worker.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        });
+    }
+</script>
+
+<script>
     window["optimoveSDK"].API.setUserId("25409360");
     window["optimoveSDK"].API.setPushReceivedListener((push) => {
         logger.info("optimoveSDK pushReceivedListener. Push received: ", push);
