@@ -7,7 +7,7 @@
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/js/optimove/optimove.worker.js')
+            navigator.serviceWorker.register('optimove.worker.js')
                 .then(registration => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 })
@@ -19,7 +19,7 @@
 </script>
 
 <script type="text/javascript" src="https://sdk.optimove.net/v2/websdk/?tenant_id=1676&tenant_token=c6090f8b1b704887bd6a27311d37c1e8" id="optimoveSDK"
-        data-optimove-service-worker-path="/js/optimove/optimove.worker.js">
+        data-optimove-service-worker-path="optimove.worker.js">
 </script>
 
 <script>
